@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "25912344729",
+    "project_id": "ramadhanpal",
+    "storage_bucket": "ramadhanpal.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:25912344729:android:99fe8443f9883442683808",
+        "android_client_info": {
+          "package_name": "com.example.ramadhan_pal"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAa-aoTzTuKjRH4sRINpyB2yM-0T1GCKTQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
