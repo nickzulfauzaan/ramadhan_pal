@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:provider/provider.dart';
+import 'package:ramadhan_pal/module/qibla/controller/provider/qibla_provider.dart';
 import 'package:sizer/sizer.dart';
 import 'package:ramadhan_pal/module/auth/controller/provider/auth_provider.dart';
 import 'package:ramadhan_pal/module/prayer/controller/provider/prayer_provider.dart';
@@ -23,6 +24,8 @@ class RamadanCompanionApp extends StatelessWidget {
           providers: [
             ChangeNotifierProvider(create: (_) => AuthProvider()),
             ChangeNotifierProvider(create: (_) => PrayerProvider()),
+            ChangeNotifierProvider(create: (_) => QiblaProvider()),
+            ChangeNotifierProvider(create: (_) => QiblaProvider()),
           ],
           child: MaterialApp.router(
             title: 'Ramadan Companion',

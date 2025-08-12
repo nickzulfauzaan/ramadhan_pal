@@ -23,4 +23,11 @@ class PrayerProvider with ChangeNotifier {
       notifyListeners();
     }
   }
+
+  void reset() {
+    data = null;
+    error = null;
+    isLoading = false;
+    notifyListeners();
+  }
 }

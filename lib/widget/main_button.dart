@@ -21,7 +21,13 @@ class MainButton extends StatelessWidget {
         height: 6.h,
         width: double.maxFinite,
         child: FilledButton(
-          onPressed: (isLoading) ? null : onPressed,
+          style: ButtonStyle(
+            backgroundColor: WidgetStateProperty.all(Colors.green[700]),
+            shape: WidgetStateProperty.all(
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(3.w)),
+            ),
+          ),
+          onPressed: isLoading ? () {} : onPressed,
           child: (isLoading)
               ? SizedBox(
                   height: 20,
@@ -29,7 +35,7 @@ class MainButton extends StatelessWidget {
                   child: CircularProgressIndicator(
                     strokeWidth: 3,
                     strokeCap: StrokeCap.round,
-                    color: Colors.green[100],
+                    color: Colors.white,
                   ),
                 )
               : Text(

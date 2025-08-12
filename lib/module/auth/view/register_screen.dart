@@ -106,6 +106,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     context,
                   );
                 },
+                isLoading: context.watch<AuthProvider>().isAuthLoading,
               ),
             ],
           ),

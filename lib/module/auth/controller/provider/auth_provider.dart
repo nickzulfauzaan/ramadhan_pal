@@ -9,6 +9,7 @@ class AuthProvider extends ChangeNotifier {
 
   User? user;
   bool isLoading = true;
+  bool isAuthLoading = false;
 
   AuthProvider() {
     _service.authStateChanges().listen((userData) {
@@ -25,11 +26,15 @@ class AuthProvider extends ChangeNotifier {
     BuildContext context,
   ) async {
     try {
+      isAuthLoading = true;
+      notifyListeners();
+
       await _service.registerWithEmail(
         name: name,
         email: email,
         password: password,
       );
+
       if (!context.mounted) return;
       context.go('/prayer');
     } on FirebaseAuthException catch (e) {
@@ -40,18 +45,28 @@ class AuthProvider extends ChangeNotifier {
       );
     } catch (e, stackTrace) {
       logger.f('REGISTRATION_FATAL', error: e, stackTrace: stackTrace);
+    } finally {
+      isAuthLoading = false;
+      notifyListeners();
     }
   }
 
   Future login(String email, String password, BuildContext context) async {
     try {
+      isAuthLoading = true;
+      notifyListeners();
+
       await _service.signInWithEmail(email: email, password: password);
+
       if (!context.mounted) return;
       context.go('/prayer');
     } on FirebaseAuthException catch (e) {
       logger.e('LOGIN_ERROR', error: e.message, stackTrace: e.stackTrace);
     } catch (e, stackTrace) {
       logger.f('LOGIN_FATAL', error: e, stackTrace: stackTrace);
+    } finally {
+      isAuthLoading = false;
+      notifyListeners();
     }
   }
 

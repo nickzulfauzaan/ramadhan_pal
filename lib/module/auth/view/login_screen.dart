@@ -92,8 +92,8 @@ class _LoginScreenState extends State<LoginScreen> {
                     context,
                   );
                 },
+                isLoading: context.watch<AuthProvider>().isAuthLoading,
               ),
-
               SizedBox(height: 2.h),
               TextButton(
                 onPressed: () => context.push('/register'),
