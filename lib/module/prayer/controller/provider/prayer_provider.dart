@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ramadhan_pal/constant/widget_constant.dart';
 import '../service/prayer_service.dart';
 
 class PrayerProvider with ChangeNotifier {
@@ -13,11 +14,13 @@ class PrayerProvider with ChangeNotifier {
     error = null;
     data = null;
     notifyListeners();
+
     try {
       final result = await _service.fetchTimesByCity(city, country);
       data = result;
-    } catch (e) {
+    } catch (e, stackTrace) {
       error = e.toString();
+      logger.e('PRAYER_PROVIDER_ERROR', error: e, stackTrace: stackTrace);
     } finally {
       isLoading = false;
       notifyListeners();
