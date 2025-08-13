@@ -27,7 +27,7 @@ class QiblaCard extends StatelessWidget {
                 child: Icon(
                   Icons.navigation_rounded,
                   color: Colors.green[700],
-                  size: 24,
+                  size: 5.w,
                 ),
               ),
               SizedBox(width: 16),
@@ -38,7 +38,7 @@ class QiblaCard extends StatelessWidget {
                     Text(
                       'Find Qibla Direction',
                       style: GoogleFonts.montserrat(
-                        fontSize: 14.sp,
+                        fontSize: 16.sp,
                         fontWeight: FontWeight.w600,
                         color: Colors.green[800],
                       ),
@@ -47,7 +47,7 @@ class QiblaCard extends StatelessWidget {
                     Text(
                       'Use compass to face Kaaba',
                       style: GoogleFonts.montserrat(
-                        fontSize: 12.sp,
+                        fontSize: 14.sp,
                         color: Colors.grey[600],
                       ),
                     ),

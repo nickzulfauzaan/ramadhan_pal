@@ -102,7 +102,7 @@ class _PrayerScreenState extends State<PrayerScreen> {
             Text(
               title,
               style: GoogleFonts.montserrat(
-                fontSize: 14.sp,
+                fontSize: 16.sp,
                 fontWeight: FontWeight.w600,
                 color: Colors.green[800],
               ),

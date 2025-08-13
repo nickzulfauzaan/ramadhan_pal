@@ -45,7 +45,7 @@ class WelcomeCard extends StatelessWidget {
                       'Your Ramadhan companion',
                       style: GoogleFonts.montserrat(
                         fontSize: 14.sp,
-                        color: Colors.grey,
+                        color: Colors.black,
                       ),
                     ),
                   ],

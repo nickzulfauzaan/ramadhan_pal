@@ -95,7 +95,7 @@ final appRouter = GoRouter(
     GoRoute(
       path: '/qibla',
       pageBuilder: (context, state) => CustomTransitionPage(
-        child: QiblaFinderScreen(),
+        child: QiblaScreen(),
         transitionsBuilder: (context, animation, secondaryAnimation, child) {
           return SlideTransition(
             position: Tween<Offset>(
