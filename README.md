@@ -1,6 +1,6 @@
-# 🕌 Ramadan Companion App
+# 🕌 RamadanPal App
 
-A Flutter app with **Firebase Authentication**, **Prayer Times** from Al Adhan API**, and **Qibla Direction**.  
+A Flutter app with **Firebase Authentication**, **Prayer Times** from Al **Adhan API**, and **Qibla Direction**.  
 Built with **Provider** for state management.
 
 ---
@@ -17,9 +17,11 @@ Built with **Provider** for state management.
 ## 🚀 Quick Start
 1. **Flutter Version**: 3.32.0+  
 2. Clone:
+```bash
 git clone https://github.com/nickzulfauzaan/ramadhan_pal.git
 cd ramadhan_pal
 flutter pub get
+```
 3. Download google-services.json from Firebase console > Project settings > General
 4. Add google-services.json to android/app/.
 
