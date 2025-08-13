@@ -1,16 +1,30 @@
-# ramadhan_pal
+# 🕌 Ramadan Companion App
 
-A new Flutter project.
+A Flutter app with **Firebase Authentication**, **Prayer Times** from Al Adhan API**, and **Qibla Direction**.  
+Built with **Provider** for state management.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 📌 Main Features
+- **Register / Login / Logout** with Firebase.
+- **Personalized Welcome Message**.
+- Fetch **Fajr, Dhuhr, Asr, Maghrib, Isha** via [Al Adhan API](https://aladhan.com/prayer-times-api).
+- **Extra Module**: Qibla Direction compass.
+- **Auth State Persistence** — stays logged in until user logs out.
 
-A few resources to get you started if this is your first Flutter project:
+---
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## 🚀 Quick Start
+1. **Flutter Version**: 3.32.0+  
+2. Clone:
+git clone https://github.com/nickzulfauzaan/ramadhan_pal.git
+cd ramadhan_pal
+flutter pub get
+3. Download google-services.json from Firebase console > Project settings > General
+4. Add google-services.json to android/app/.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+
+## 🔑 Test Account
+- Email: **nickzulfauzaan@gmail.com**
+- Password: **Test123!**
